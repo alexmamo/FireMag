@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FireMag</string>
+    <!--IDs-->
+    <string name="web_client_id">104930572568-o1hogsdf6dctf9r0j7s2j1c5m3t9vn8r.apps.googleusercontent.com</string>
+    <!--Urls-->
+    <string name="firebase_project_id">firemag-b5399.appspot.com</string>
+</resources>

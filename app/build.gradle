@@ -1,0 +1,79 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "kotlin-kapt"
+    id "com.google.gms.google-services"
+    id "dagger.hilt.android.plugin"
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "ro.alexmamo.firemag"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    namespace "ro.alexmamo.firemag"
+}
+
+dependencies {
+    //ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewmodel_version"
+    //Navigation Compose
+    implementation "androidx.navigation:navigation-compose:$navigation_compose_version"
+    //Compose
+    implementation "androidx.compose.material3:material3:$compose_material3_version"
+    //Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    //Hilt Navigation Compose
+    implementation "androidx.hilt:hilt-navigation-compose:$hilt_navigation_compose_version"
+    //Firebase
+    implementation platform("com.google.firebase:firebase-bom:$firebase_bom_version")
+    implementation "com.google.firebase:firebase-auth-ktx"
+    implementation "com.google.firebase:firebase-database-ktx"
+    implementation "com.google.firebase:firebase-firestore-ktx"
+    //Paging Compose
+    implementation "androidx.paging:paging-compose:$paging_compose_version"
+    //Play Services
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$play_services_version"
+    //Play Services Auth
+    implementation "com.google.android.gms:play-services-auth:$play_services_auth_version"
+    //Accompanist
+    implementation "com.google.accompanist:accompanist-navigation-animation:$accompanist_version"
+    //Coil
+    implementation "io.coil-kt:coil-compose:$coil_compose_version"
+}
