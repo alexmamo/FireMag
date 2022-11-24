@@ -1,6 +1,6 @@
 FireMag is an Android shopping app entirely built with Firebase products. It's writen in [Kotlin][1] and uses the MVVM Architecture Pattern. For the UI it uses Jetpack Compose, Android's modern toolkit for building native UI.
 
-![alt text](https://i.ibb.co/McM4pNL/FireMag.png)
+![alt text](https://alexmamo.ro/apps/FireMag/app.png)
 
 Below you can find the docs for each tehnology that is used in this app:
 
