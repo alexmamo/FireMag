@@ -12,9 +12,9 @@ Below you can find the docs for each tehnology that is used in this app:
 
 ## Android Architecture Components:
 * [ViewModel][6]
-* [Android Jetpack Navigation][7] https://developer.android.com/guide/navigation
-* [Compose Material 3][8] https://developer.android.com/jetpack/androidx/releases/compose-material3
-* [Paging][9] https://developer.android.com/jetpack/androidx/releases/paging
+* [Android Jetpack Navigation][7]
+* [Compose Material 3][8]
+* [Paging][9]
 
 ## Dependency Injection:
 * [Hilt for Android][10]
