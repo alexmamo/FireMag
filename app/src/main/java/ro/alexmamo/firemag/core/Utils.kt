@@ -22,13 +22,13 @@ import ro.alexmamo.firemag.domain.repository.ShoppingCartItems
 
 class Utils {
     companion object {
-        fun print(e: Exception?) {
-            Log.e(TAG, e?.message ?: e.toString())
+        fun print(e: Exception?) = e?.apply {
+            Log.e(TAG, stackTraceToString())
         }
 
         fun print(errorState: LoadState.Error) {
             val error = errorState.error
-            Log.d(TAG, error.message ?: error.toString())
+            Log.d(TAG, error.stackTraceToString())
         }
 
         val items = listOf(

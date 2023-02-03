@@ -1,7 +1,7 @@
 package ro.alexmamo.firemag.core
 
 object FirebaseConstants {
-    //Firebase Nodes and Collections
+    //Realtime Database Nodes and Firestore Collections
     const val BANNERS = "banners"
     const val BRANDS = "brands"
     const val SHOPPING_CARTS = "shoppingCarts"
